@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>User Detail</title>
+</head>
+<body>
+<h1>User Detail</h1>
+
+User Name : <td>
+    <span th:text="${user.userName}"></span>
+</td> <br>
+
+Phone Number : <td>
+    <span th:text="${user.phoneNum}"></span>
+</td> <br>
+
+Gender : <td>
+    <span th:if="${user.gender == 1}">Male</span>
+    <span th:unless="${user.gender == 1}">Female</span>
+</td> <br>
+
+Marital Status : <td>
+    <span th:if="${user.married == true}">Married</span>
+    <span th:unless="${user.married == true}">Single</span>
+</td> <br>
+
+City : <td>
+    <span th:text="${user.city}"></span>
+</td> <br>
+
+
+<!--Cities :<p th:text="${user.username}"> </p>-->
+
+</body>
+</html>
