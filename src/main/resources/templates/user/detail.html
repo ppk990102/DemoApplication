@@ -7,6 +7,8 @@
 <body>
 <h1>User Detail</h1>
 
+<!--<div th:each="user : $(userList}">-->
+
 User Name : <td>
     <span th:text="${user.userName}"></span>
 </td> <br>
@@ -29,8 +31,7 @@ City : <td>
     <span th:text="${user.city}"></span>
 </td> <br>
 
-
-<!--Cities :<p th:text="${user.username}"> </p>-->
+<!--</div>-->
 
 </body>
 </html>

@@ -16,6 +16,8 @@ import java.util.List;
 @Controller
 public class HomeController {
 
+    public List<UserCreateForm> userList = new ArrayList<>();
+
     @RequestMapping("/")
     public String home(Model model) {
         UserForm userForm1 = new UserForm("John",23);
@@ -68,6 +70,19 @@ public class HomeController {
 //        System.out.println("Phone:" + userCreateForm.getPhoneNum());
 //        System.out.println(userCreateForm.getGender());
 //        System.out.println(userCreateForm.isMarried());
+
+//
+        userList.add(userCreateForm);
+        for (var user: userList) {
+            System.out.println("----------------------------------------");
+            System.out.println("username: " + user.getUserName());
+            System.out.println("Phone: " + user.getPhoneNum());
+            System.out.println("Gender: " + user.getGender());
+            System.out.println("Marital Status: " + user.isMarried());
+            System.out.println("City: " + user.getCity());
+            System.out.println("----------------------------------------");
+        }
+
         model.addAttribute("user", userCreateForm);
         return "user/detail";
     }
